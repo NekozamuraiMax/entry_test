@@ -1,0 +1,138 @@
+﻿.dli-plus {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 1em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+  margin-top: 21px;
+  margin-left:1px;
+}
+
+.dli-plus::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+a.btn--circle {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  background: deepskyblue;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+a.btn--circle i {
+  font-size: 150%;
+  line-height: 60px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  letter-spacing: 0;
+}
+
+a.btn--circle:hover i {
+  line-height: 55px;
+}
+
+.square_btn {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #333; /* 枠の調整 */
+  background: #fff; /* ボタンの背景色 */
+  margin-top:5px;
+}
+ 
+.square_btn::before, .square_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* 棒の幅（太さ） */
+  height: 10px; /* 棒の高さ */
+  background: #333; /* バツ印の色 */
+}
+ 
+.square_btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.square_btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.square_btn:active {
+  background: red;
+  color: #FFF;
+}
+
+#delete-msg1{
+	display: none;
+	background-color: #FFCC00;
+}
+
+#delete-msg2{
+	display: none;
+	background-color: #FFCC00;
+}
+
+#delete-msg3{
+	display: none;
+	background-color: #FFCC00;
+}
+
+#add2{
+	display: none;
+}
+
+#parent-msg{
+	display: none;
+	background-color: red;
+}
+
+#child1-msg{
+	display:none;
+	background-color: red;
+}
+
+#office1-msg{
+	display: none;
+	background-color: red;
+}
+
+#child2-msg{
+	display:none;
+	background-color: red;
+}
+
+#office2-msg{
+	display: none;
+	background-color: red;
+}
+
+#child3-msg{
+	display:none;
+	background-color: red;
+}
+
+#office3-msg{
+	display: none;
+	background-color: red;
+}
+
+#cancel{
+	background-color: silver;
+}

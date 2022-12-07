@@ -1,0 +1,185 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプル　エントリーシート</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/entry_style.css">
+    <script src="js/entry_initialize.js"></script>
+</head>
+<body>
+
+<form class="w-75 mx-auto" id="entrysheet">
+<label class="mt-3"><big><big>登録入力フォーム</big></big></label>
+<p class="mt-3"><big>保護者名(必須)</big></p>
+<div id="parent-msg">保護者名が入力されていません。</div>
+<div>
+<input type="text" id="parent" class="form-control w-100 mt-1" placeholder="タップして入力" value="" />
+</div>
+<div>
+<p class="mt-3"><big>児童登録(１名以上必須) </big><br><font color="red"><small>*児童は３人まで登録可。</small></font></p>
+<div id="childentry1" style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+<div style="text-align:right;">
+<p><font color="red"><small>データを削除  </small></font><a href="javascript:delete1Click();" id="delete1"><span class="square_btn"></span></a></p>
+</div>
+<div id="delete-msg1">データを消去しました。</div>
+<p class="mt-3"><big>１人目</big><div id="child1-msg">お名前が入力されていません。</div><input type="text" class="form-control w-100 mt-1" id="child1" placeholder="お名前(タップして入力)" /></p>
+<p class="mt-3">利用する放課後等デイサービス
+<div id="office1-msg">放課後等デイサービスが選択されていません。</div>
+<select class="form-control w-100 mt-1" id="office1">
+	<option disabled selected>選択して下さい</option>
+	<option value="smileday">スマイル</option>
+	<option value="temu">てむてむ</option>
+	<option value="hoya">ほやほや</option>
+	<option value="naru">なるなる</option>
+</select>
+</p>
+</div>
+<div style="text-align:right;" id="add1">
+<a href="javascript:add1Click()" class="btn btn--circle btn--circle-c btn--shadow"><span class="dli-plus"></span></a>
+</div>
+
+<div id="delete-msg2">データを消去しました。</div>
+<div id="childentry2" style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+<div style="text-align:right;">
+<p><font color="red"><small>データを削除  </small></font><a href="javascript:delete2Click();" id="delete2"><span class="square_btn"></span></a></p>
+</div>
+<p class="mt-3"><big>２人目</big><div id="child2-msg">お名前が入力されていません。</div><input type="text" class="form-control w-100 mt-1" id="child2" placeholder="お名前(タップして入力)" /></p>
+<p class="mt-3">利用する放課後等デイサービス
+<div id="office2-msg">放課後等デイサービスが選択されていません。</div>
+<select class="form-control w-100 mt-1" id="office2">
+	<option disabled selected>選択して下さい</option>
+	<option value="smileday">スマイル</option>
+	<option value="temu">てむてむ</option>
+	<option value="hoya">ほやほや</option>
+	<option value="naru">なるなる</option>
+</select>
+</p>
+</div>
+<div style="text-align:right;" id="add2">
+<a href="javascript:add2Click()" class="btn btn--circle btn--circle-c btn--shadow"><span class="dli-plus"></span></a>
+</div>
+
+<div id="delete-msg3">データを消去しました。</div>
+<div id="childentry3" style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+<div style="text-align:right;">
+<p><font color="red"><small>データを削除  </small></font><a href="javascript:delete3Click();" id="delete3"><span class="square_btn"></span></a></p>
+</div>
+<p class="mt-3"><big>３人目</big><div id="child3-msg">お名前が入力されていません。</div><input type="text" class="form-control w-100 mt-1" id="child3" placeholder="お名前(タップして入力)" /></p>
+<p class="mt-3">利用する放課後等デイサービス
+<div id="office3-msg">放課後等デイサービスが選択されていません。</div>
+<select class="form-control w-100 mt-1" id="office3">
+	<option disabled selected>選択して下さい</option>
+	<option value="smileday">スマイル</option>
+	<option value="temu">てむてむ</option>
+	<option value="hoya">ほやほや</option>
+	<option value="naru">なるなる</option>
+</select>
+</p>
+</div>
+</div>
+<input type="submit" id="submit" class="mt-4 btn btn-primary" value="送信" >	<input type="button" id="cancel" class="mt-4 btn" value="キャンセル" >
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+<script src="js/entry_form.js"></script>
+<script>
+const childentry1 = document.getElementById('childentry1');
+const childentry2 = document.getElementById('childentry2');
+const childentry3 = document.getElementById('childentry3');
+const parent = document.getElementById('parent');
+const child1 = document.getElementById('child1');
+const child2 = document.getElementById('child2');
+const child3 = document.getElementById('child3');
+const office1= document.getElementById('office1');
+const office2= document.getElementById('office2');
+const office3= document.getElementById('office3');
+const child1Msg = document.getElementById('child1-msg');
+const child2Msg = document.getElementById('child2-msg');
+const child3Msg = document.getElementById('child3-msg');
+const parentMsg = document.getElementById('parent-msg');
+const office1Msg= document.getElementById('office1-msg');
+const office2Msg= document.getElementById('office2-msg');
+const office3Msg= document.getElementById('office3-msg');
+const submit = document.getElementById('submit');
+const add1 = document.getElementById('add1');
+const add2 = document.getElementById('add2');
+submit.addEventListener('click', () => {
+	let err = -1;
+
+	if(parent.value === ''){
+		parentMsg.style.display = "block";
+		err = err + 1;
+	}else{
+		parentMsg.style.display = "none";
+	}
+
+	if(child1.value === ""){
+		child1Msg.style.display = "block";
+		err = err + 1;
+	}else{
+		child1Msg.style.display = "none";
+	}
+
+	if(office1.selectedIndex === 0){
+		office1Msg.style.display = "block";
+		err = err + 1;
+	}else{
+		office1Msg.style.display = "none";
+	}
+
+	if(childentry2.style.display !== "none"){
+		if(child2.value === ""){
+			child2Msg.style.display = "block";
+			err = err + 1;
+		}else child2Msg.style.display = "none";
+
+		if(office2.selectedIndex === 0){
+			office2Msg.style.display = "block";
+			err = err + 1;
+		}else office2Msg.style.display = "none";
+	}else{
+		child2Msg.style.display = "none";
+		office2Msg.style.display= "none";
+	}
+
+	if(childentry3.style.display !== "none"){
+		if(child3.value === ""){
+			child3Msg.style.display = "block";
+			err = err + 1;
+		}else child3Msg.style.display = "none";
+
+		if(office3.selectedIndex === 0){
+			office3Msg.style.display = "block";
+			err = err + 1;
+		}else office3Msg.style.display = "none";
+	}else{
+		child3Msg.style.display = "none";
+		office3Msg.style.display= "none";
+	}
+
+	if(err > -1){
+		alert("赤いところを直して、もう一度、送信ボタンを押してください。");
+		event.preventDefault();
+	}else{
+		if(window.confirm('登録してよろしいですか？')){
+			return true;
+		}else event.preventDefault();
+	}
+}, false);
+
+document.getElementById('cancel').addEventListener('click', () => {
+	if(window.confirm('登録を中止しますか？')){
+		window.close();
+	}else evenet.preventDefault();
+});
+
+</script>
+
+</body>
+</html>
