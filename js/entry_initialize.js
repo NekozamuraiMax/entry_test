@@ -1,4 +1,4 @@
-const id = "1657662321-pGPYaMqW";
+﻿const id = "1657662321-pGPYaMqW";
 
 window.onload = function(e){
 	liff.init({
