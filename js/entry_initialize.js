@@ -1,27 +1,45 @@
-$(window).load(function(){
-	const liffId = "1657662321-nR14gmQy";
-	initializeLiff(liffId);
-});
+const id = "1657662321-pGPYaMqW";
 
-function initializeLiff(liffId){
+window.onload = function(e){
 	liff.init({
-		liffId:liffId
+		liffId: id
 	}).then(() =>{
 		initializeApp();
 	}).catch((err) => {
+		window.alert(err);
 		console.log('LIFF Initialization failed ', err);
 	});
+};
+
+function initializeApp() {
+    // ログインチェック
+    if (liff.isLoggedIn()) {
+        //ログイン済
+
+    } else {
+        // 未ログイン
+        let result = window.confirm("LINE Loginしますか？");
+        if(result) {
+            liff.login();
+        }
+    }
 }
 
 function sendText(text){
-	liff.sendMessages([{
-		'type': 'text',
-		'text': text
-	}]).then(function(){
-		liff.closeWindow();
-	}).catch(funciont(error){
-		window.alert('Failed to send message ' + error);
-	});
+	if(!liff.isInClient()){
+		window.alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+	}else{
+		liff.sendMessages([
+			{
+			type: 'text',
+			text: text
+			}
+		]).then(function(){
+			liff.closeWindow();
+		}).catch(function(error){
+			window.alert('Failed to send message ' + error);
+		});
+	}
 }
 
 const params = (new URL(document.location)).searchParams;
@@ -53,16 +71,16 @@ $(function(){
 		let parentData = parent.value;
 		let child1Data = child1.value;
 		let office1Data= office1.value;
-		let message= '${parentData}\n${child1Data}\n${office1Data}';
+		let message= '[保護者名]\n' + parentData + '\n[児童名(1人目)]\n' + child1Data + '\n[事業所(1人目)]\n' + office1Data;	//'${parentData}\n${child1Data}\n${office1Data}';
 
 		let child2Data = child2.value;
 		let office2Data= office2.value;
 		let child3Data = child3.value;
 		let office3Data= office3.value;
 		if(childentry2.style.display === "block"){
-			message = message + '\n${child2Data}\n${office2Data}';
+			message = message + '\n[児童名(2人目)]\n' + child2Data + '\n[事業所(2人目)]\n' + office2Data;
 			if(childentry3.style.display === "block"){
-				message = message + '\n${child3Data}\n${office3Data}';
+				message = message + '\n[児童名(3人目)]\n' + child3Data ; '\n[事業所(3人目)]\n' + office3Data;
 			}
 		}
 		sendText(message);
