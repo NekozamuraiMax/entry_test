@@ -71,7 +71,7 @@ $(function(){
 		let parentData = parent.value;
 		let child1Data = child1.value;
 		let office1Data= office1.value;
-		let message= '[新規登録][保護者名]\n' + parentData + '\n[児童名(1人目)]\n' + child1Data + '\n[事業所(1人目)]\n' + office1Data;	//'${parentData}\n${child1Data}\n${office1Data}';
+		let message= '[新規登録]\n[保護者名]\n' + parentData + '\n[児童名(1人目)]\n' + child1Data + '\n[事業所(1人目)]\n' + office1Data;	//'${parentData}\n${child1Data}\n${office1Data}';
 
 		let child2Data = child2.value;
 		let office2Data= office2.value;
