@@ -1,4 +1,6 @@
-﻿const id = "1657662321-pGPYaMqW";
+const params = (new URL(document.location)).searchParams;
+const key = params.get('key');
+const id = params.get('id'); //"1657662321-pGPYaMqW";
 
 window.onload = function(e){
 	liff.init({
@@ -41,9 +43,6 @@ function sendText(text){
 		});
 	}
 }
-
-const params = (new URL(document.location)).searchParams;
-const key = params.get('key');
 
 const childentry1 = document.getElementById('childentry1');
 const childentry2 = document.getElementById('childentry2');
