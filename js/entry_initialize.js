@@ -122,7 +122,7 @@ $(function(){
 		if(childentry2.style.display === "block"){
 			message = message + '\n[児童名(2人目)]\n' + child2Data + '\n[事業所(2人目)]\n' + office2Data;
 			if(childentry3.style.display === "block"){
-				message = message + '\n[児童名(3人目)]\n' + child3Data ; '\n[事業所(3人目)]\n' + office3Data;
+				message = message + '\n[児童名(3人目)]\n' + child3Data + '\n[事業所(3人目)]\n' + office3Data;
 			}
 		}
 		sendText(message);
