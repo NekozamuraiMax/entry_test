@@ -1,3 +1,6 @@
+const params = (new URL(document.location)).searchParams;
+const key = params.get('key');
+const id = params.get('id'); //"1657662321-pGPYaMqW";
 
 window.onload = function(e){
 	liff.init({
@@ -23,10 +26,6 @@ function initializeApp() {
         }
     }
 }
-
-const params = (new URL(document.location)).searchParams;
-const key = params.get('key');
-//const id = params.get('id'); //"1657662321-pGPYaMqW";
 
 function sendText(text){
 	if(!liff.isInClient()){
