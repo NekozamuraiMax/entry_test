@@ -1,8 +1,9 @@
-const params = (new URL(document.location)).searchParams;
+const url = new URL(document.location);
+const params = new URLSearchParams(url.search);
 const key = params.get('key');
 const id = params.get('id'); //"1657662321-pGPYaMqW";
 
-window.alert(params);
+window.alert(url);
 window.alert(key);
 window.alert(id);
 
