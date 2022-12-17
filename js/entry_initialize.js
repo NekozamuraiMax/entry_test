@@ -70,13 +70,55 @@ $(function(){
 	$('form').submit(function(){
 		let parentData = parent.value;
 		let child1Data = child1.value;
-		let office1Data= office1.value;
+		let office1Data;
+		switch(office1.value){
+			case 'smileday':
+				office1Data = 'スマイル';
+				break;
+			case 'temu':
+				office1Data = 'てむてむ';
+				break;
+			case 'hoya':
+				office1Data = 'ほやほや';
+				break;
+			case 'naru':
+				office1Data = 'なるなる';
+				break;
+		}
 		let message= '[新規登録]\n[保護者名]\n' + parentData + '\n[児童名(1人目)]\n' + child1Data + '\n[事業所(1人目)]\n' + office1Data;	//'${parentData}\n${child1Data}\n${office1Data}';
 
 		let child2Data = child2.value;
-		let office2Data= office2.value;
+		let office2Data;
 		let child3Data = child3.value;
-		let office3Data= office3.value;
+		let office3Data;
+		switch(office2.value){
+			case 'smileday':
+				office2Data = 'スマイル';
+				break;
+			case 'temu':
+				office2Data = 'てむてむ';
+				break;
+			case 'hoya':
+				office2Data = 'ほやほや';
+				break;
+			case 'naru':
+				office2Data = 'なるなる';
+				break;
+		}
+		switch(office3.value){
+			case 'smileday':
+				office3Data = 'スマイル';
+				break;
+			case 'temu':
+				office3Data = 'てむてむ';
+				break;
+			case 'hoya':
+				office3Data = 'ほやほや';
+				break;
+			case 'naru':
+				office3Data = 'なるなる';
+				break;
+		}
 		if(childentry2.style.display === "block"){
 			message = message + '\n[児童名(2人目)]\n' + child2Data + '\n[事業所(2人目)]\n' + office2Data;
 			if(childentry3.style.display === "block"){
