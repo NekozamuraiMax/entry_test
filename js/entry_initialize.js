@@ -13,6 +13,9 @@ window.onload = function(e){
 	});
 };
 
+const key = params.get('key');
+alerm(id);
+alerm(key);
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
