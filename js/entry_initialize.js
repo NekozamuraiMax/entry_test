@@ -1,6 +1,5 @@
 const url = new URL(document.location);
 const params = new URLSearchParams(url.search);
-const key = params.get('key');
 const id = params.get('id');
 
 window.onload = function(e){
