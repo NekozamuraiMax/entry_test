@@ -14,8 +14,8 @@ window.onload = function(e){
 };
 
 const key = params.get('key');
-alerm(id);
-alerm(key);
+window.alert(id);
+window.alert(key);
 function initializeApp() {
     // ログインチェック
     if (liff.isLoggedIn()) {
