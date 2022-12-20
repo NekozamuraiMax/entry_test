@@ -109,7 +109,11 @@ submit.addEventListener('click', () => {
 
 	if(child1.value === ""){
 		child1Msg.style.display = "block";
+		child1Msg2.style.display= "none";
 		err = err + 1;
+	}else if(regex.test(child1.value)){
+		child1Msg2.style.display= "block";
+		child1Msg.style.display= "none";
 	}else{
 		child1Msg.style.display = "none";
 		child1Msg2.style.display= "none";
@@ -125,7 +129,11 @@ submit.addEventListener('click', () => {
 	if(childentry2.style.display !== "none"){
 		if(child2.value === ""){
 			child2Msg.style.display = "block";
+			child2Msg2.style.display= "none";
 			err = err + 1;
+		}else if(regex.test(child2.value)){
+			child2Msg2.style.display= "block";
+			child2Msg.style.display = "none";
 		}else{
 			child2Msg.style.display = "none";
 			child2Msg2.style.display= "none";
@@ -144,7 +152,11 @@ submit.addEventListener('click', () => {
 	if(childentry3.style.display !== "none"){
 		if(child3.value === ""){
 			child3Msg.style.display = "block";
+			child3Msg2.style.display= "none";
 			err = err + 1;
+		}else if(regex.test(child3.value){
+			child3Msg2.style.display= "block";
+			child3Msg.style.display = "none";
 		}else{
 			child3Msg2.style.display= "none";
 			child3Msg.style.display = "none";
