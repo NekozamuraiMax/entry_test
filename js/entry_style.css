@@ -118,6 +118,11 @@ a.btn--circle:hover i {
 	background-color: red;
 }
 
+#child1-msg3{
+	display:none;
+	background-color: red;
+}
+
 #office1-msg{
 	display: none;
 	background-color: red;
@@ -129,6 +134,11 @@ a.btn--circle:hover i {
 }
 
 #child2-msg2{
+	display:none;
+	background-color: red;
+}
+
+#child2-msg3{
 	display:none;
 	background-color: red;
 }
@@ -148,6 +158,10 @@ a.btn--circle:hover i {
 	background-color: red;
 }
 
+#child3-msg3{
+	display:none;
+	background-color: red;
+}
 #office3-msg{
 	display: none;
 	background-color: red;
