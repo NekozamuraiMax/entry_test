@@ -100,10 +100,6 @@ submit.addEventListener('click', () => {
 	}else{
 		parentMsg.style.display = "none";
 	}
-	if(parent.value.match(/^[!-/:-@¥[-`{-~]$/)){
-		parentMsg2.style.display= "block";
-		err = err + 1;
-	}else parentMsg2.style.display= "none";
 
 	if(child1.value === ""){
 		child1Msg.style.display = "block";
