@@ -103,7 +103,17 @@ a.btn--circle:hover i {
 	background-color: red;
 }
 
+#parent-msg2{
+	display: none;
+	background-color: red;
+}
+
 #child1-msg{
+	display:none;
+	background-color: red;
+}
+
+#child1-msg2{
 	display:none;
 	background-color: red;
 }
@@ -118,12 +128,22 @@ a.btn--circle:hover i {
 	background-color: red;
 }
 
+#child2-msg2{
+	display:none;
+	background-color: red;
+}
+
 #office2-msg{
 	display: none;
 	background-color: red;
 }
 
 #child3-msg{
+	display:none;
+	background-color: red;
+}
+
+#child3-msg2{
 	display:none;
 	background-color: red;
 }
